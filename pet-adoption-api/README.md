@@ -43,16 +43,20 @@ pet-adoption-api/
 │   ├── config/
 │   │   └── swagger.js
 │   ├── controllers/
-│   │   └── adoption.controller.js
+│   │   ├── adoption.controller.js
+│   │   └── user.controller.js
 │   ├── data/
-│   │   └── adoption.memory.js
+│   │   ├── adoption.memory.js
+│   │   └── user.memory.js
 │   ├── middlewares/
 │   │   ├── errorHandler.js
 │   │   └── notFoundHandler.js
 │   ├── routes/
-│   │   └── adoption.router.js
+│   │   ├── adoption.router.js
+│   │   └── user.router.js
 │   └── services/
-│       └── adoption.service.js
+│       ├── adoption.service.js
+│       └── user.service.js
 ├── tests/
 │   └── adoption.router.test.js
 ├── Dockerfile

@@ -8,6 +8,7 @@ const adoptionRouter = require("./routes/adoption.router");
 const swaggerSpec = require("./config/swagger");
 const notFoundHandler = require("./middlewares/notFoundHandler");
 const errorHandler = require("./middlewares/errorHandler");
+const userRouter = require("./routes/user.router");
 
 const app = express();
 
@@ -24,6 +25,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/adoptions", adoptionRouter);
+app.use("/api/users", userRouter);
 app.use("/api/docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.use(notFoundHandler);
